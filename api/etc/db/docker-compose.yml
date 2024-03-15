@@ -1,0 +1,17 @@
+version: "3"
+services:
+  movie-db:
+    container_name: movie_db
+    image: postgres:13.2-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: movie_db
+      PGDATA: /data/postgres
+    volumes:
+      - movie-db:/data/postgres
+    ports:
+      - "5432:5432"
+
+volumes:
+  movie-db:

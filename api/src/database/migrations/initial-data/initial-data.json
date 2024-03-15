@@ -1,0 +1,424 @@
+[
+  {
+    "adult": false,
+    "backdrop_path": "/pwGmXVKUgKN13psUjlhC9zBcq1o.jpg",
+    "id": 634492,
+    "title": "Madame Web",
+    "original_language": "en",
+    "original_title": "Madame Web",
+    "overview": "Forced to confront revelations about her past, paramedic Cassandra Webb forges a relationship with three young women destined for powerful futures...if they can all survive a deadly present.",
+    "poster_path": "/rULWuutDcN5NvtiZi4FRPzRYWSh.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      28,
+      14
+    ],
+    "popularity": 217.088,
+    "release_date": "2024-02-14",
+    "video": false,
+    "vote_average": 5.322,
+    "vote_count": 356
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/mSDsSDwaP3E7dEfUPWy4J0djt4O.jpg",
+    "id": 129,
+    "title": "Spirited Away",
+    "original_language": "ja",
+    "original_title": "千と千尋の神隠し",
+    "overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+    "poster_path": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      16,
+      10751,
+      14
+    ],
+    "popularity": 214.154,
+    "release_date": "2001-07-20",
+    "video": false,
+    "vote_average": 8.5,
+    "vote_count": 15667
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/8uVKfOJUhmybNsVh089EqLHUYEG.jpg",
+    "id": 693134,
+    "title": "Dune: Part Two",
+    "original_language": "en",
+    "original_title": "Dune: Part Two",
+    "overview": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee.",
+    "poster_path": "/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      878,
+      12
+    ],
+    "popularity": 1174.289,
+    "release_date": "2024-02-27",
+    "video": false,
+    "vote_average": 8.424,
+    "vote_count": 1599
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/bQS43HSLZzMjZkcHJz4fGc7fNdz.jpg",
+    "id": 792307,
+    "title": "Poor Things",
+    "original_language": "en",
+    "original_title": "Poor Things",
+    "overview": "Brought back to life by an unorthodox scientist, a young woman runs off with a debauched lawyer on a whirlwind adventure across the continents. Free from the prejudices of her times, she grows steadfast in her purpose to stand for equality and liberation.",
+    "poster_path": "/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      878,
+      10749,
+      35
+    ],
+    "popularity": 1584.682,
+    "release_date": "2023-12-07",
+    "video": false,
+    "vote_average": 7.9,
+    "vote_count": 2244
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/pjy0T63vIFYvxRSJ3ZtjB4tmWV4.jpg",
+    "id": 4935,
+    "title": "Howl''s Moving Castle",
+    "original_language": "ja",
+    "original_title": "ハウルの動く城",
+    "overview": "Sophie, a young milliner, is turned into an elderly woman by a witch who enters her shop and curses her. She encounters a wizard named Howl and gets caught up in his resistance to fighting for the king.",
+    "poster_path": "/6pZgH10jhpToPcf0uvyTCPFhWpI.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      14,
+      16,
+      12
+    ],
+    "popularity": 185.794,
+    "release_date": "2004-09-09",
+    "video": false,
+    "vote_average": 8.407,
+    "vote_count": 9276
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/deLWkOLZmBNkm8p16igfapQyqeq.jpg",
+    "id": 763215,
+    "title": "Damsel",
+    "original_language": "en",
+    "original_title": "Damsel",
+    "overview": "A young woman''s marriage to a charming prince turns into a fierce fight for survival when she''s offered up as a sacrifice to a fire-breathing dragon.",
+    "poster_path": "/sMp34cNKjIb18UBOCoAv4DpCxwY.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      14,
+      12,
+      28
+    ],
+    "popularity": 1419.128,
+    "release_date": "2024-03-08",
+    "video": false,
+    "vote_average": 7.292,
+    "vote_count": 679
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/x3XEQ3Wey8enS7mMjo3eUJp8Myi.jpg",
+    "id": 155533,
+    "title": "Manhunt",
+    "original_language": "en",
+    "original_title": "Manhunt",
+    "overview": "A conspiracy thriller about one of the best known but least understood crimes in history. This is the astonishing story of the hunt for John Wilkes Booth in the aftermath of Abraham Lincoln''s assassination—as the fate of the country hangs in the balance.",
+    "poster_path": "/pN5qeqDgCG1Pij7KaEBKLkyjn4A.jpg",
+    "media_type": "tv",
+    "genre_ids": [
+      18,
+      80
+    ],
+    "popularity": 54.549,
+    "first_air_date": "2024-03-14",
+    "vote_average": 10,
+    "vote_count": 4,
+    "origin_country": [
+      "US"
+    ]
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/lzWHmYdfeFiMIY4JaMmtR7GEli3.jpg",
+    "id": 438631,
+    "title": "Dune",
+    "original_language": "en",
+    "original_title": "Dune",
+    "overview": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet''s exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity''s greatest potential-only those who can conquer their fear will survive.",
+    "poster_path": "/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      878,
+      12
+    ],
+    "popularity": 611.77,
+    "release_date": "2021-09-15",
+    "video": false,
+    "vote_average": 7.788,
+    "vote_count": 10744
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/qz2QzkYzesbbL94rdUpZrFPhlRe.jpg",
+    "id": 1019420,
+    "title": "Irish Wish",
+    "original_language": "en",
+    "original_title": "Irish Wish",
+    "overview": "When the love of her life gets engaged to her best friend, Maddie puts her feelings aside to be a bridesmaid at their wedding in Ireland. Until a spontaneous wish for true love causes her to wake up as the bride-to-be.",
+    "poster_path": "/v4Bb70dpIIQoEnZAHnm3nzCPauU.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      35,
+      10749
+    ],
+    "popularity": 47.583,
+    "release_date": "2024-03-14",
+    "video": false,
+    "vote_average": 7.6,
+    "vote_count": 7
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/5zmiBoMzeeVdQ62no55JOJMY498.jpg",
+    "id": 126308,
+    "title": "Shōgun",
+    "original_language": "en",
+    "original_title": "Shōgun",
+    "overview": "In Japan in the year 1600, at the dawn of a century-defining civil war, Lord Yoshii Toranaga is fighting for his life as his enemies on the Council of Regents unite against him, when a mysterious European ship is found marooned in a nearby fishing village.",
+    "poster_path": "/7O4iVfOMQmdCSxhOg1WnzG1AgYT.jpg",
+    "media_type": "tv",
+    "genre_ids": [
+      18,
+      10768
+    ],
+    "popularity": 1278.955,
+    "first_air_date": "2024-02-27",
+    "vote_average": 8.836,
+    "vote_count": 204,
+    "origin_country": [
+      "US"
+    ]
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/9JNsAIFMu4o37AgnU1JVtR6AWsK.jpg",
+    "id": 1248795,
+    "title": "Art of Love",
+    "original_language": "tr",
+    "original_title": "Romantik Hırsız",
+    "overview": "After learning that the art thief she has been chasing is her ex-lover, an officer working for Interpol concocts a plan to catch him red-handed.",
+    "poster_path": "/niVtvS9Kf8G1VDPSqurqHkaSSwm.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      10749,
+      28,
+      18
+    ],
+    "popularity": 50.921,
+    "release_date": "2024-03-14",
+    "video": false,
+    "vote_average": 8.318,
+    "vote_count": 11
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/fK40VGYIm7hmKrLJ26fgPQU0qRG.jpg",
+    "id": 149,
+    "title": "Akira",
+    "original_language": "ja",
+    "original_title": "AKIRA",
+    "overview": "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath that only two teenagers and a group of psychics can stop.",
+    "poster_path": "/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      16,
+      878,
+      28
+    ],
+    "popularity": 95.698,
+    "release_date": "1988-07-16",
+    "video": false,
+    "vote_average": 7.947,
+    "vote_count": 3943
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/6snBXmgkscLEJQmxx46qEIlqYlB.jpg",
+    "id": 46518,
+    "title": "Masters of the Air",
+    "original_language": "en",
+    "original_title": "Masters of the Air",
+    "overview": "During World War II, airmen risk their lives with the 100th Bomb Group, a brotherhood forged by courage, loss, and triumph.",
+    "poster_path": "/rSAmgcoA74371rplbqM27yVsd3y.jpg",
+    "media_type": "tv",
+    "genre_ids": [
+      10768,
+      18
+    ],
+    "popularity": 419.024,
+    "first_air_date": "2024-01-25",
+    "vote_average": 7.925,
+    "vote_count": 146,
+    "origin_country": [
+      "US"
+    ]
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/gJL5kp5FMopB2sN4WZYnNT5uO0u.jpg",
+    "id": 1011985,
+    "title": "Kung Fu Panda 4",
+    "original_language": "en",
+    "original_title": "Kung Fu Panda 4",
+    "overview": "Po is gearing up to become the spiritual leader of his Valley of Peace, but also needs someone to take his place as Dragon Warrior. As such, he will train a new kung fu practitioner for the spot and will encounter a villain called the Chameleon who conjures villains from the past.",
+    "poster_path": "/kDp1vUBnMpe8ak4rjgl3cLELqjU.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      28,
+      12,
+      16,
+      35,
+      10751
+    ],
+    "popularity": 1728.914,
+    "release_date": "2024-03-02",
+    "video": false,
+    "vote_average": 6.836,
+    "vote_count": 119
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/zW0v2YT74C6tRafzqqBkfSqLAN0.jpg",
+    "id": 52814,
+    "title": "Halo",
+    "original_language": "en",
+    "original_title": "Halo",
+    "overview": "Depicting an epic 26th-century conflict between humanity and an alien threat known as the Covenant, the series weaves deeply drawn personal stories with action, adventure and a richly imagined vision of the future.",
+    "poster_path": "/hmHA5jqxN3ESIAGx0jAwV7TJhTQ.jpg",
+    "media_type": "tv",
+    "genre_ids": [
+      10759,
+      10765
+    ],
+    "popularity": 2630.045,
+    "first_air_date": "2022-03-24",
+    "vote_average": 8.333,
+    "vote_count": 2404,
+    "origin_country": [
+      "US"
+    ]
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nb3xI8XI3w4pMVZ38VijbsyBqP4.jpg",
+    "id": 872585,
+    "title": "Oppenheimer",
+    "original_language": "en",
+    "original_title": "Oppenheimer",
+    "overview": "The story of J. Robert Oppenheimer''s role in the development of the atomic bomb during World War II.",
+    "poster_path": "/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      18,
+      36
+    ],
+    "popularity": 815.967,
+    "release_date": "2023-07-19",
+    "video": false,
+    "vote_average": 8.116,
+    "vote_count": 7153
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/gJ5wIChiPCJI0jPi47slHwA2iYy.jpg",
+    "id": 241269,
+    "title": "Bandidos",
+    "original_language": "es",
+    "original_title": "Bandidos",
+    "overview": "A gang of skilled misfits ventures to uncover a long-hidden Mayan treasure. Their strategy? Hazy. Their dynamic? Off. Luckily, they''re pretty ingenious.",
+    "poster_path": "/hoM8DvKJw5KPfdHbcITxn0rO2HZ.jpg",
+    "media_type": "tv",
+    "genre_ids": [
+      10759
+    ],
+    "popularity": 102.763,
+    "first_air_date": "2024-03-13",
+    "vote_average": 8,
+    "vote_count": 4,
+    "origin_country": [
+      "MX"
+    ]
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/ybn3jCia5XBD0ZgEM07gcUPuRNh.jpg",
+    "id": 508883,
+    "title": "The Boy and the Heron",
+    "original_language": "ja",
+    "original_title": "君たちはどう生きるか",
+    "overview": "While the Second World War rages, the teenage Mahito, haunted by his mother''s tragic death, is relocated from Tokyo to the serene rural home of his new stepmother Natsuko, a woman who bears a striking resemblance to the boy''s mother. As he tries to adjust, this strange new world grows even stranger following the appearance of a persistent gray heron, who perplexes and bedevils Mahito, dubbing him the \"long-awaited one.\"",
+    "poster_path": "/f4oZTcfGrVTXKTWg157AwikXqmP.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      16,
+      12,
+      14
+    ],
+    "popularity": 807.379,
+    "release_date": "2023-07-14",
+    "video": false,
+    "vote_average": 7.479,
+    "vote_count": 1081
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/zVMdsmRUH2U1bZSYr8GLZkfs3mi.jpg",
+    "id": 957304,
+    "title": "Drive-Away Dolls",
+    "original_language": "en",
+    "original_title": "Drive-Away Dolls",
+    "overview": "Jamie, an uninhibited free spirit bemoaning yet another breakup with a girlfriend, and her demure friend Marian desperately needs to loosen up. In search of a fresh start, the two embark on an impromptu road trip to Tallahassee, but things quickly go awry when they cross paths with a group of inept criminals along the way.",
+    "poster_path": "/gavGnAMTXPkpoFgG0stwgIgKb64.jpg",
+    "media_type": "movie",
+    "genre_ids": [
+      35,
+      80
+    ],
+    "popularity": 103.986,
+    "release_date": "2024-02-22",
+    "video": false,
+    "vote_average": 6.068,
+    "vote_count": 73
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/2rmK7mnchw9Xr3XdiTFSxTTLXqv.jpg",
+    "id": 37854,
+    "title": "One Piece",
+    "original_language": "ja",
+    "original_title": "ワンピース",
+    "overview": "Years ago, the fearsome Pirate King, Gol D. Roger was executed leaving a huge pile of treasure and the famous \"One Piece\" behind. Whoever claims the \"One Piece\" will be named the new King of the Pirates.\n\nMonkey D. Luffy, a boy who consumed a \"Devil Fruit,\" decides to follow in the footsteps of his idol, the pirate Shanks, and find the One Piece. It helps, of course, that his body has the properties of rubber and that he''s surrounded by a bevy of skilled fighters and thieves to help him along the way.\n\nLuffy will do anything to get the One Piece and become King of the Pirates!",
+    "poster_path": "/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg",
+    "media_type": "tv",
+    "genre_ids": [
+      10759,
+      35,
+      16
+    ],
+    "popularity": 184.149,
+    "first_air_date": "1999-10-20",
+    "vote_average": 8.727,
+    "vote_count": 4363,
+    "origin_country": [
+      "JP"
+    ]
+  }
+]

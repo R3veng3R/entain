@@ -8,7 +8,7 @@ import { MovieModule } from './movie/movie.module';
   imports: [
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot(databaseConfig()),
-    MovieModule
+    MovieModule,
   ],
 })
 export class AppModule {}

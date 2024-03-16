@@ -1,25 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getData } from '../../services/movie.service';
+import { useMovies } from '../hooks/useMovies';
 
 export const MoviePage = () => {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    getTestData();
-  }, []);
-
-  const getTestData = async () => {
-    try {
-      const data = await getData();
-      setData(data);
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  return (
-    <div>
-      {` This is your data: ${data}`}
-    </div>
-  );
+  const { data: movies } = useMovies();
+  return <div>{movies?.map((movie) => <div key={movie.id}>{movie.title}</div>)}</div>;
 };

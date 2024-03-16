@@ -1,0 +1,39 @@
+version: "3"
+services:
+  movie-db:
+    container_name: movie_db
+    image: postgres:13.2-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: movie_db
+      PGDATA: /data/postgres
+    volumes:
+      - movie-db:/data/postgres
+    ports:
+      - "5432:5432"
+
+  entain-backend:
+    build: ./api
+    container_name: entain_backend
+    depends_on:
+      - movie-db
+    environment:
+      - DB_HOST=movie-db
+    ports:
+      - 8081:8081
+    links:
+      - movie-db
+
+  entain-ui:
+    build: ./ui
+    container_name: entain_ui
+    depends_on:
+      - entain-backend
+    ports:
+      - 3000:3000
+    links:
+      - entain-backend
+
+volumes:
+  movie-db:

@@ -1,13 +1,14 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import databaseConfig from './database/database.config';
 import { ConfigModule } from '@nestjs/config';
+import { MovieModule } from './movie/movie.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), TypeOrmModule.forRoot(databaseConfig())],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRoot(databaseConfig()),
+    MovieModule
+  ],
 })
 export class AppModule {}

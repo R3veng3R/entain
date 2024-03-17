@@ -1,6 +1,8 @@
 import { MovieEntity } from '../entity/movie.entity';
-import { Movie, TmdbMovieResponse } from '../types';
 import { Injectable } from '@nestjs/common';
+import { Movie } from '../type/movie.type';
+import { TmdbMovieResponse } from '../type/tmdb.movie.response.type';
+import { GenreEntity } from '../entity/genre.entity';
 
 @Injectable()
 export class MovieMapper {
@@ -15,11 +17,16 @@ export class MovieMapper {
       originalTitle: movieEntity.originalTitle,
       overview: movieEntity.overview,
       posterPath: movieEntity.posterPath,
+      genres: movieEntity.genres?.map((genre) => genre.name) || [],
     };
   }
 
-  public mapToEntity(response: TmdbMovieResponse): MovieEntity {
+  public mapToEntity(
+    response: TmdbMovieResponse,
+    genres: GenreEntity[],
+  ): MovieEntity {
     return {
+      genres,
       adult: response.adult,
       originalTitle: response.original_title,
       overview: response.overview,

@@ -31,7 +31,7 @@ describe('MovieService test suit', () => {
       .mockResolvedValueOnce(movieEntities);
 
     // When
-    const movies = await movieService.getMovieList();
+    const movies = await movieService.getMovieList({});
 
     // Then
     expect(movieRepositoryFindAllMethod).toHaveBeenCalled();

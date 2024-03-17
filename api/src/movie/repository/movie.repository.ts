@@ -12,7 +12,8 @@ export class MovieRepository extends Repository<MovieEntity> {
   async findAll(request: MovieRequest) {
     const query = this.dataSource
       .getRepository(MovieEntity)
-      .createQueryBuilder('movie');
+      .createQueryBuilder('movie')
+      .orderBy('movie.popularity', 'DESC');
 
     this.applyFilters(query, request);
     return query.getMany();

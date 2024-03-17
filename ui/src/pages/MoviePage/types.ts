@@ -5,3 +5,7 @@ export interface Movie {
   originalTitle: string;
   posterPath: string;
 }
+
+export interface MovieFilters {
+  title?: string;
+}

@@ -1,4 +1,10 @@
 import { MovieEntity } from './movie/entity/movie.entity';
+import { GenreEntity } from './movie/entity/genre.entity';
+
+export const testGenreEntity: GenreEntity = {
+  id: 1,
+  name: 'Fantasy',
+};
 
 export const testMovieEntity1: MovieEntity = {
   id: 1,
@@ -10,6 +16,7 @@ export const testMovieEntity1: MovieEntity = {
   posterPath: '/posterPath.jpg',
   voteAverage: 8.5,
   popularity: 10,
+  genres: [testGenreEntity],
 };
 
 export const testMovieEntity2: MovieEntity = {

@@ -1,7 +1,7 @@
 import { MovieEntity } from '../entity/movie.entity';
 import { DataSource, Repository, SelectQueryBuilder } from 'typeorm';
 import { Injectable } from '@nestjs/common';
-import { MovieRequest } from '../types';
+import { MovieRequest } from '../type/movie.request.type';
 
 @Injectable()
 export class MovieRepository extends Repository<MovieEntity> {
@@ -13,6 +13,7 @@ export class MovieRepository extends Repository<MovieEntity> {
     const query = this.dataSource
       .getRepository(MovieEntity)
       .createQueryBuilder('movie')
+      .leftJoinAndSelect('movie.genres', 'genre')
       .orderBy('movie.popularity', 'DESC');
 
     this.applyFilters(query, request);
@@ -24,10 +25,14 @@ export class MovieRepository extends Repository<MovieEntity> {
     request: MovieRequest,
   ) {
     const { alias } = query;
-    const { title } = request;
+    const { title, genreIds } = request;
+
+    if (genreIds?.length) {
+      query.andWhere(`genre.id IN (:...genreIds)`, { genreIds });
+    }
 
     if (title) {
-      query.orWhere(`LOWER(${alias}.title) LIKE :title`, {
+      query.andWhere(`LOWER(${alias}.title) LIKE :title`, {
         title: `%${title.toLowerCase()}%`,
       });
     }

@@ -5,10 +5,12 @@ import { MovieRepository } from './repository/movie.repository';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MovieEntity } from './entity/movie.entity';
 import { MovieMapper } from './mapper/movie.mapper';
+import { HttpModule } from '@nestjs/axios';
+import { TmdbDataImportService } from './service/tmdb-data-import.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([MovieEntity])],
+  imports: [TypeOrmModule.forFeature([MovieEntity]), HttpModule],
   controllers: [MovieController],
-  providers: [MovieService, MovieRepository, MovieMapper],
+  providers: [MovieService, TmdbDataImportService, MovieRepository, MovieMapper],
 })
 export class MovieModule {}

@@ -3,10 +3,10 @@ import { Column, Entity, PrimaryColumn } from 'typeorm';
 @Entity({ name: 'movie' })
 export class MovieEntity {
   @PrimaryColumn()
-  id: number;
+  id?: number;
 
   @Column()
-  externalId: number;
+  tmdbId: number;
 
   @Column()
   adult: boolean;
@@ -25,4 +25,7 @@ export class MovieEntity {
 
   @Column()
   voteAverage: number;
+
+  @Column()
+  popularity: number;
 }

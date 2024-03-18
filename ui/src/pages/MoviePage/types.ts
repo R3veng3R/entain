@@ -10,3 +10,8 @@ export interface MovieFilters {
   title?: string;
   genreIds?: number[];
 }
+
+export interface Genre {
+  id: number;
+  name: string;
+}

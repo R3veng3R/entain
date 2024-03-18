@@ -9,12 +9,14 @@ import { HttpModule } from '@nestjs/axios';
 import { TmdbDataImportService } from './service/tmdbDataImport.service';
 import { GenreEntity } from './entity/genre.entity';
 import { GenreRepository } from './repository/genre.repository';
+import { GenreService } from './service/genre.service';
 
 @Module({
   imports: [TypeOrmModule.forFeature([MovieEntity, GenreEntity]), HttpModule],
   controllers: [MovieController],
   providers: [
     MovieService,
+    GenreService,
     TmdbDataImportService,
     MovieRepository,
     GenreRepository,

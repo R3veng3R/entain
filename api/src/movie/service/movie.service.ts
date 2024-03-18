@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { MovieRepository } from '../repository/movie.repository';
 import { MovieMapper } from '../mapper/movie.mapper';
-import { MovieRequest } from '../type/movie.request.type';
+import { MovieRequest } from '../type/movieRequest.type';
 import { Movie } from '../type/movie.type';
 
 @Injectable()

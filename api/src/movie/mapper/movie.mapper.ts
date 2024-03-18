@@ -1,7 +1,7 @@
 import { MovieEntity } from '../entity/movie.entity';
 import { Injectable } from '@nestjs/common';
 import { Movie } from '../type/movie.type';
-import { TmdbMovieResponse } from '../type/tmdb.movie.response.type';
+import { TmdbMovieResponse } from '../type/tmdbMovieResponse.type';
 import { GenreEntity } from '../entity/genre.entity';
 
 @Injectable()

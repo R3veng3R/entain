@@ -4,7 +4,7 @@ import { MovieMapper } from '../mapper/movie.mapper';
 import { MovieRepository } from '../repository/movie.repository';
 import { createMock } from '@golevelup/ts-jest';
 import { MovieEntity } from '../entity/movie.entity';
-import { testMovieEntity1 } from '../../TestObjects';
+import { testMovieEntity1 } from '../../testObjects';
 
 describe('MovieService test suit', () => {
   let movieService: MovieService;

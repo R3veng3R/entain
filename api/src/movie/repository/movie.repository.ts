@@ -1,7 +1,7 @@
 import { MovieEntity } from '../entity/movie.entity';
 import { DataSource, Repository, SelectQueryBuilder } from 'typeorm';
 import { Injectable } from '@nestjs/common';
-import { MovieRequest } from '../type/movie.request.type';
+import { MovieRequest } from '../type/movieRequest.type';
 
 @Injectable()
 export class MovieRepository extends Repository<MovieEntity> {

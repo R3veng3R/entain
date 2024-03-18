@@ -6,9 +6,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { MovieEntity } from './entity/movie.entity';
 import { MovieMapper } from './mapper/movie.mapper';
 import { HttpModule } from '@nestjs/axios';
-import { TmdbDataImportService } from './service/tmdb-data-import.service';
+import { TmdbDataImportService } from './service/tmdbDataImport.service';
 import { GenreEntity } from './entity/genre.entity';
-import { GenreRepository } from './repository/genre.repository.service';
+import { GenreRepository } from './repository/genre.repository';
 
 @Module({
   imports: [TypeOrmModule.forFeature([MovieEntity, GenreEntity]), HttpModule],

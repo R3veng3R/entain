@@ -1,6 +1,6 @@
 import { MovieEntity } from '../entity/movie.entity';
 import { MovieMapper } from './movie.mapper';
-import { testMovieEntity1, testMovieEntity2 } from '../../TestObjects';
+import { testMovieEntity1, testMovieEntity2 } from '../../testObjects';
 
 describe('MovieMapper test cases', () => {
   const movieMapper: MovieMapper = new MovieMapper();

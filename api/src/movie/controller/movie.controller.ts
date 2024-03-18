@@ -1,6 +1,6 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { MovieService } from '../service/movie.service';
-import { MovieRequest } from '../type/movie.request.type';
+import { MovieRequest } from '../type/movieRequest.type';
 import { Movie } from '../type/movie.type';
 
 @Controller('/movie')

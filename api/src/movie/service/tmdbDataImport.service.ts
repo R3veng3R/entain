@@ -4,8 +4,8 @@ import * as initialData from '../../database/initial-data.json';
 import { HttpService } from '@nestjs/axios';
 import { MovieRepository } from '../repository/movie.repository';
 import { MovieMapper } from '../mapper/movie.mapper';
-import { TmdbMovieResponse } from '../type/tmdb.movie.response.type';
-import { GenreRepository } from '../repository/genre.repository.service';
+import { TmdbMovieResponse } from '../type/tmdbMovieResponse.type';
+import { GenreRepository } from '../repository/genre.repository';
 import { MovieEntity } from '../entity/movie.entity';
 
 @Injectable()

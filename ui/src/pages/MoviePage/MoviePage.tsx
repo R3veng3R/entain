@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { useMovies } from './hooks/useMovies';
-import { MovieFilters } from './types';
+import { Movie, MovieFilters } from './types';
 import { MoviePoster } from './components/MoviePoster';
 import { useGenres } from './hooks/useGenres';
 import { GenreFilters } from './components/GenreFilters';
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
-import { ResponsiveModal } from '../../components/ResponsiveModal';
+import { MovieModal } from './components/MovieModal';
 
 const Page = styled.div`
   display: flex;
@@ -34,6 +34,7 @@ const FilterWrapper = styled.div`
 
 export const MoviePage = () => {
   const [filters, setFilters] = useState<MovieFilters>();
+  const [selectedMovie, setSelectedMovie] = useState<Movie>();
   const { data: movies } = useMovies(filters);
   const { data: genres } = useGenres();
 
@@ -41,27 +42,37 @@ export const MoviePage = () => {
     <Page>
       <div style={{ background: 'white', borderRadius: '5px' }}>
         <Input
-          placeholder="Search by title"
+          placeholder='Search by title'
           addonBefore={<SearchOutlined />}
-          onChange={({target}) => {
-            setFilters({ ...filters, title: target.value });
-          }}
+          onChange={({ target }) => setFilters({ ...filters, title: target.value })}
         />
       </div>
 
       <FilterWrapper>
-        <GenreFilters genres={genres} onChange={(genreIds) => {
-          setFilters({ ...filters, genreIds });
-        }} />
+        <GenreFilters
+          genres={genres}
+          onChange={(genreIds) => setFilters({ ...filters, genreIds })}
+        />
       </FilterWrapper>
 
       <Content>
         {movies?.map((movie) => (
-          <MoviePoster key={movie.id} posterPath={movie.posterPath} />
+          <MoviePoster
+            key={movie.id}
+            posterPath={movie.posterPath}
+            onClick={() => setSelectedMovie(movie)}
+          />
         ))}
       </Content>
 
-      <ResponsiveModal isOpen={true} />
+      {
+        selectedMovie && (
+          <MovieModal
+            movie={selectedMovie}
+            onClose={() => setSelectedMovie(undefined)}
+          />
+        )
+      }
     </Page>
   );
 };

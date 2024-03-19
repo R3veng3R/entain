@@ -1,5 +1,6 @@
 import { MovieEntity } from './movie/entity/movie.entity';
 import { GenreEntity } from './movie/entity/genre.entity';
+import { TmdbMovieResponse } from './movie/type/tmdbMovieResponse.type';
 
 export const testGenreEntity: GenreEntity = {
   id: 1,
@@ -29,4 +30,17 @@ export const testMovieEntity2: MovieEntity = {
   posterPath: '/posterPath2.jpg',
   voteAverage: 3.5,
   popularity: 10,
+};
+
+export const testTmdbMovieResponse: TmdbMovieResponse = {
+  id: 1,
+  adult: false,
+  popularity: 111,
+  title: 'test response',
+  original_title: 'test original title',
+  genres: [{ id: 1, name: 'Horror' }],
+  backdrop_path: '',
+  poster_path: '',
+  overview: 'test overview',
+  vote_average: 10,
 };

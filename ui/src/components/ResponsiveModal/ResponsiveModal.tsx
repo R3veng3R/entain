@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Modal, { BaseModalBackground, ModalProvider } from 'styled-react-modal';
 import styled from 'styled-components';
 import { CssBreakpoint } from '../../enum/CssBreakpoint';

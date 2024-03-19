@@ -7,6 +7,7 @@ import { useGenres } from './hooks/useGenres';
 import { GenreFilters } from './components/GenreFilters';
 import { Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
+import { ResponsiveModal } from '../../components/ResponsiveModal';
 
 const Page = styled.div`
   display: flex;
@@ -59,6 +60,8 @@ export const MoviePage = () => {
           <MoviePoster key={movie.id} posterPath={movie.posterPath} />
         ))}
       </Content>
+
+      <ResponsiveModal isOpen={true} />
     </Page>
   );
 };

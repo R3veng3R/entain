@@ -1,22 +1,19 @@
-import React, { CSSProperties, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import Modal, { BaseModalBackground, ModalProvider } from 'styled-react-modal';
 import styled from 'styled-components';
 import { CssBreakpoint } from '../../enum/CssBreakpoint';
 
-const StyledModal = styled.div` 
+const StyledModal = styled.div`
   width: 50%;
-  height: 50%;
+  height: 75%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #FFF;
+  color: black;
 
   @media screen and (max-width: ${CssBreakpoint.Sm}) {
      width: 100%;
      height: 100%;
-     padding-top: 50%;
-     padding-bottom: 50px;
   }
 `;
 
@@ -26,17 +23,18 @@ const Background = styled(BaseModalBackground)`
 
 interface Props {
   isOpen: boolean;
+  onBackgroundClick?: () => void;
   children?: ReactNode;
-  style?: CSSProperties;
 }
 
-export const ResponsiveModal = ({ isOpen, children, style }: Props) => {
+export const ResponsiveModal = ({ isOpen, children, onBackgroundClick }: Props) => {
   return (
     <ModalProvider backgroundComponent={Background}>
       <Modal
         isOpen={isOpen}
+        onBackgroundClick={onBackgroundClick}
       >
-        <StyledModal style={style} className="modal-content">
+        <StyledModal className="modal-content">
           {children}
         </StyledModal>
       </Modal>

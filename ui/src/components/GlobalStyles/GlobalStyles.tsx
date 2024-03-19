@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     font-style: normal;
     margin: 10px 15px;
     background: #060d17;
-    color: white;
+    color: snow;
     
     *::-webkit-scrollbar {
       width: 12px;

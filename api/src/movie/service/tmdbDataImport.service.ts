@@ -1,4 +1,4 @@
-import { Injectable, OnApplicationBootstrap } from '@nestjs/common';
+import { Injectable, Logger, OnApplicationBootstrap } from '@nestjs/common';
 import * as process from 'process';
 import * as initialData from '../../database/initial-data.json';
 import { HttpService } from '@nestjs/axios';
@@ -7,9 +7,12 @@ import { MovieMapper } from '../mapper/movie.mapper';
 import { TmdbMovieResponse } from '../type/tmdbMovieResponse.type';
 import { GenreRepository } from '../repository/genre.repository';
 import { MovieEntity } from '../entity/movie.entity';
+import { firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class TmdbDataImportService implements OnApplicationBootstrap {
+  private readonly logger = new Logger(TmdbDataImportService.name);
+
   constructor(
     private readonly httpService: HttpService,
     private readonly movieRepository: MovieRepository,
@@ -20,21 +23,25 @@ export class TmdbDataImportService implements OnApplicationBootstrap {
   async onApplicationBootstrap(): Promise<void> {
     const movieCount = await this.movieRepository.count();
     if (movieCount > 0) {
-      console.log('Movie DB is not empty skipping data import');
+      this.logger.log('Movie DB is not empty skipping data import...');
       return;
     }
-    await this.importData();
+
+    this.logger.log('Movie DB import started...');
+    await this.importData(process.env.TMDB_API_KEY);
+    const importedCount = await this.movieRepository.count();
+    this.logger.log(`Number of movies imported: ${importedCount}`);
+    this.logger.log('Movie DB import ended...');
   }
 
-  private async importData(): Promise<void> {
-    const apiKey = process.env.TMDB_API_KEY;
-    console.log('Movie DB import started');
+  async importData(apiKey: string): Promise<void> {
     for (const data of initialData) {
       try {
-        const { data: response } =
-          await this.httpService.axiosRef.get<TmdbMovieResponse>(
+        const { data: response } = await firstValueFrom(
+          this.httpService.get<TmdbMovieResponse>(
             `https://api.themoviedb.org/3/movie/${data.id}?api_key=${apiKey}`,
-          );
+          ),
+        );
 
         const genres = response.genres?.length
           ? await this.movieGenreRepository.save(response.genres)
@@ -46,9 +53,11 @@ export class TmdbDataImportService implements OnApplicationBootstrap {
         );
         await this.movieRepository.save(entity);
       } catch (e) {
-        console.error(`Error importing data with id: ${data.id}, skipping`, e);
+        this.logger.error(
+          `Error importing data with id: ${data.id}, skipping`,
+          e,
+        );
       }
     }
-    console.log('Movie DB import ended');
   }
 }

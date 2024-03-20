@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from '../../theme/color-theme';
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -10,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
     margin: 10px 15px;
-    background: #060d17;
+    background: ${theme.colors.darkBlue[8]};
     color: snow;
     
     *::-webkit-scrollbar {
@@ -26,7 +27,7 @@ export const GlobalStyles = createGlobalStyle`
 
     *::-webkit-scrollbar-thumb {
       border-radius: 8px;
-      background-color: #363636;
+      background-color: ${theme.colors.greyDark};
     }
   }
 `;

@@ -1,12 +1,20 @@
-import { Genre } from '../types';
 import { Checkbox } from 'antd';
 import styled from 'styled-components';
+import { theme } from '../../../theme/color-theme';
+import { Genre } from '../types';
 
 const CheckboxWrapper = styled.div`
   .ant-checkbox-wrapper,
   .ant-checkbox-group {
-    color: white;
+    color: ${theme.colors.white};
   }
+`;
+
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
 `;
 
 const Label = styled.div`
@@ -24,14 +32,11 @@ export const GenreFilters = ({ genres, onChange }: Props) => {
     value: genre.id,
   }));
   return (
-    <>
+    <Container>
       <Label>Genres:</Label>
       <CheckboxWrapper>
-        <Checkbox.Group
-          options={options || []}
-          onChange={onChange}
-        />
+        <Checkbox.Group options={options || []} onChange={onChange} />
       </CheckboxWrapper>
-    </>
+    </Container>
   );
 };

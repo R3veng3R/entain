@@ -4,11 +4,13 @@ export interface Movie {
   overview: string;
   originalTitle: string;
   posterPath: string;
+  genres: string[];
 }
 
 export interface MovieFilters {
   title?: string;
   genreIds?: number[];
+  overview?: string;
 }
 
 export interface Genre {

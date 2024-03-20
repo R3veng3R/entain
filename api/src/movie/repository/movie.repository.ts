@@ -25,7 +25,7 @@ export class MovieRepository extends Repository<MovieEntity> {
     request: MovieRequest,
   ) {
     const { alias } = query;
-    const { title, genreIds } = request;
+    const { title, genreIds, overview } = request;
 
     if (genreIds?.length) {
       query.andWhere(`genre.id IN (:...genreIds)`, { genreIds });
@@ -34,6 +34,12 @@ export class MovieRepository extends Repository<MovieEntity> {
     if (title) {
       query.andWhere(`LOWER(${alias}.title) LIKE :title`, {
         title: `%${title.toLowerCase()}%`,
+      });
+    }
+
+    if (overview) {
+      query.andWhere(`LOWER(${alias}.overview) LIKE :overview`, {
+        overview: `%${overview.toLowerCase()}%`,
       });
     }
   }

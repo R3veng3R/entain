@@ -1,9 +1,10 @@
-import { ResponsiveModal } from '../../../components/ResponsiveModal';
-import { Movie } from '../types';
-import styled from 'styled-components';
-import { IMDB_IMAGE_BASE_PATH } from './MoviePoster';
 import { CloseOutlined } from '@ant-design/icons';
+import styled from 'styled-components';
+import { ResponsiveModal } from '../../../components/ResponsiveModal';
 import { CssBreakpoint } from '../../../enum/CssBreakpoint';
+import { theme } from '../../../theme/color-theme';
+import { Movie } from '../types';
+import { IMDB_IMAGE_BASE_PATH } from './MoviePoster';
 
 const Header = styled.div`
   display: flex;
@@ -16,15 +17,22 @@ const Content = styled.div`
   display: flex;
   height: inherit;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   justify-content: center;
+  border-top: 1px solid ${theme.colors.grey};
+  border-bottom: 1px solid ${theme.colors.grey};
+  padding: 10px 20px;
 
-  @media screen and (max-width: ${CssBreakpoint.Lg}) {
+  img {
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width: ${CssBreakpoint.Xl}) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    border: none;
+
     img {
       width: 75%;
       margin-bottom: 20px;
@@ -34,11 +42,11 @@ const Content = styled.div`
 
 const CloseIcon = styled(CloseOutlined)`
   font-size: 1.8rem;
-  color: #24508d;
+  color: ${theme.colors.darkBlue[5]};
   cursor: pointer;
 
   &:hover {
-    color: #060d17;
+    color: ${theme.colors.darkBlue[8]};
   }
 `;
 
@@ -49,17 +57,22 @@ interface Props {
 
 export const MovieModal = ({ movie, onClose }: Props) => {
   return (
-    <ResponsiveModal
-      isOpen={true}
-      onBackgroundClick={onClose}
-    >
+    <ResponsiveModal isOpen={true} onBackgroundClick={onClose}>
       <Header>
         <CloseIcon onClick={onClose} />
       </Header>
       <Content>
-        <img src={`${IMDB_IMAGE_BASE_PATH}${movie.posterPath}`} alt='' style={{ marginRight: '10px' }} />
-        <div>{movie.overview}</div>
+        <img src={`${IMDB_IMAGE_BASE_PATH}${movie.posterPath}`} alt="" />
+        <div>
+          <div style={{ color: theme.colors.neutral[8] }}>GENRES:</div>
+          <div style={{ color: theme.colors.neutral[8] }}>
+            {movie.genres.length > 0 && movie.genres.sort().join(', ')}
+          </div>
+          <br />
+          <div style={{ color: theme.colors.neutral[8] }}>OVERVIEW:</div>
+          <div>{movie.overview}</div>
+        </div>
       </Content>
     </ResponsiveModal>
-  )
-}
+  );
+};

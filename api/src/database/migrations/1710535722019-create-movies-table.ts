@@ -1,19 +1,19 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class CreateMoviesTable1710535722019 implements MigrationInterface {
-
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(`
-        CREATE TABLE movies
+        CREATE TABLE movie
         (
             id             SERIAL PRIMARY KEY,
-            external_id    INTEGER NOT NULL,
+            tmdb_id        INTEGER NOT NULL,
             adult          BOOLEAN DEFAULT false,
             title          VARCHAR(150),
             original_title VARCHAR(150),
             overview       TEXT,
             poster_path    VARCHAR(100),
-            vote_average   NUMERIC
+            vote_average   NUMERIC,
+            popularity     NUMERIC
         )
     `);
   }

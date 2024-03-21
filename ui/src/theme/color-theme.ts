@@ -1,0 +1,30 @@
+export const theme = {
+  colors: {
+    black: '#000000',
+    white: '#FFFFFF',
+    grey: '#CCC',
+    greyDark: '#A19F9F',
+    darkBlue: {
+      1: '#F2F5F7',
+      2: '#E5EBF0',
+      3: '#BFCCD9',
+      4: '#99ADC3',
+      5: '#4D7096',
+      6: '#003369',
+      7: '#002E5E',
+      8: '#060d17',
+    },
+    neutral: {
+      1: '#FCFCFC',
+      2: '#F3F3F3',
+      3: '#F1F1F1',
+      4: '#E1E1E1',
+      5: '#DCDBDB',
+      6: '#C7C5C5',
+      7: '#9D9A9A',
+      8: '#736F6F',
+      9: '#565353',
+      10: '#393737',
+    },
+  },
+};

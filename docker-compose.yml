@@ -14,7 +14,7 @@ services:
       - "5432:5432"
 
   entain-backend:
-    build: .
+    build: ./api
     container_name: entain_backend
     depends_on:
       - movie-db
@@ -24,6 +24,16 @@ services:
       - 8081:8081
     links:
       - movie-db
+
+  entain-ui:
+    build: ./ui
+    container_name: entain_ui
+    depends_on:
+      - entain-backend
+    ports:
+      - 3000:3000
+    links:
+      - entain-backend
 
 volumes:
   movie-db:

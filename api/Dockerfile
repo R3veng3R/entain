@@ -1,11 +1,10 @@
-FROM node:18
+FROM node:18-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/api
 COPY package*.json ./
 RUN npm install
 
 COPY . .
-
 COPY .env ./
 RUN npm run build
 
